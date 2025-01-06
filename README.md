@@ -9,4 +9,4 @@ This is a simple microservice built with Go as a learning project. The primary g
 ## 🚀 Technologies  
 - **Go**: The main language used to develop this microservice.  
 - **Clean Architecture**: Code structure inspired by Clean Architecture principles for better modularity and maintainability.  
-<img src="https://github.com/user-attachments/assets/68019a29-f09d-4197-b10c-b55d98343644" width=40>
+<img src="https://github.com/user-attachments/assets/c36c3375-65a8-41e9-b1c5-9f8ddf073d8f">
