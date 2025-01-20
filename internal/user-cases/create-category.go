@@ -1,25 +1,28 @@
 package user_cases
 
 import (
-	"log"
-
 	"github.com/Gabriel_devs/go-categories-msvc/internal/entities"
+	"github.com/Gabriel_devs/go-categories-msvc/internal/repositories"
 )
 
 type createCategoryUseCase struct {
+	repository repositories.ICategoryRepository
 }
 
-func NewcreateCategoryUseCase() createCategoryUseCase {
-	return createCategoryUseCase{}
+func NewcreateCategoryUseCase(repository repositories.ICategoryRepository) createCategoryUseCase {
+	return createCategoryUseCase{repository: repository}
 }
 
-// Corrigido para retornar um error
 func (u *createCategoryUseCase) Execute(name string) error {
 	category, err := entities.NewCategory(name)
 	if err != nil {
 		return err
 	}
 
-	log.Println(category)
+	err = u.repository.Save(category)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
