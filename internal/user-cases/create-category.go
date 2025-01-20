@@ -1,4 +1,4 @@
-package user_cases
+package use_cases
 
 import (
 	"github.com/Gabriel_devs/go-categories-msvc/internal/entities"
