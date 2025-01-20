@@ -9,6 +9,7 @@ func main() {
 			"success": true,
 		})
 	})
+
 	CategoryRoutes(r)
 
 	r.Run(":8080")

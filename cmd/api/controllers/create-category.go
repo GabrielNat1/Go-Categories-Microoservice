@@ -3,7 +3,7 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/Gabriel_devs/go-categories-microservice/internal/use_cases"
+	user_cases "github.com/Gabriel_devs/go-categories-msvc/internal/user-cases"
 	"github.com/gin-gonic/gin"
 )
 
@@ -22,7 +22,7 @@ func Createcategory(ctx *gin.Context) {
 		return
 	}
 
-	useCase := use_cases.NewcreateCategoryUseCase()
+	useCase := user_cases.NewcreateCategoryUseCase()
 	err := useCase.Execute(body.Name)
 
 	if err != nil {

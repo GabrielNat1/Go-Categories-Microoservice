@@ -8,5 +8,5 @@ import (
 func CategoryRoutes(r *gin.Engine) {
 	categoryRoutes := r.Group("/categories")
 
-	categoryRoutes.POST("/", controllers.CreateCategory)
+	categoryRoutes.POST("/", controllers.Createcategory)
 }
